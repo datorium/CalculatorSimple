@@ -21,6 +21,15 @@ namespace CalculatorSimple
         private void InitializeCalculator()
         {
             this.BackColor = Color.Purple;
+
+            string buttonName = null;
+            Button button = null;
+            for(int i = 0; i < 10; i++)
+            {
+                buttonName = "button" + i;
+                button = (Button)this.Controls[buttonName];
+                button.Text = i.ToString();
+            }
         }
     }
 }

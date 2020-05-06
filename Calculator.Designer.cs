@@ -137,10 +137,10 @@
             this.button0.Name = "button0";
             this.button0.Size = new System.Drawing.Size(80, 80);
             this.button0.TabIndex = 10;
-            this.button0.Text = "button10";
+            this.button0.Text = "button0";
             this.button0.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -156,7 +156,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Display);
-            this.Name = "Form1";
+            this.Name = "Calculator";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
