@@ -38,7 +38,14 @@ namespace CalculatorSimple
         private void Button_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            Display.Text += button.Text;
+            if (Display.Text == "0")
+            {
+                Display.Text = button.Text;
+            }
+            else
+            {
+                Display.Text += button.Text;
+            }
         }
 
         private void buttonDecimal_Click(object sender, EventArgs e)
@@ -59,13 +66,9 @@ namespace CalculatorSimple
         private void buttonBackspace_Click(object sender, EventArgs e)
         {
             string s = Display.Text;
-            if (s.Length > 1)
+            if (s.Length > 0)
             {
                 s = s.Substring(0, s.Length - 1);
-            }
-            else
-            {
-                s = string.Empty;
             }
             Display.Text = s;
         }
