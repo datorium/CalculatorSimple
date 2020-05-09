@@ -76,12 +76,20 @@ namespace CalculatorSimple
             string s = Display.Text;
             if (s.Length > 1)
             {
-                s = s.Substring(0, s.Length - 1);
+                if ((s.Contains("-")) && (s.Length == 2))
+                {
+                    s = "0";
+                }
+                else
+                {
+                    s = s.Substring(0, (s.Length - 1));
+                }
             }
             else
             {
                 s = "0";
             }
+
             Display.Text = s;
         }
 
@@ -91,7 +99,7 @@ namespace CalculatorSimple
             {
                 double number = Convert.ToDouble(Display.Text);
                 number *= -1;
-                Display.Text = Convert.ToString(number);
+                Display.Text = number.ToString();
             }
             catch
             {
