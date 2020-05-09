@@ -182,6 +182,7 @@
             this.buttonSign.TabIndex = 13;
             this.buttonSign.Text = "+/-";
             this.buttonSign.UseVisualStyleBackColor = true;
+            this.buttonSign.Click += new System.EventHandler(this.buttonSign_Click);
             // 
             // Calculator
             // 

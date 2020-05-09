@@ -72,5 +72,12 @@ namespace CalculatorSimple
             }
             Display.Text = s;
         }
+
+        private void buttonSign_Click(object sender, EventArgs e)
+        {          
+            double number = Convert.ToDouble(Display.Text);
+            number *= -1;
+            Display.Text = Convert.ToString(number);
+        }
     }
 }
