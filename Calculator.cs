@@ -17,6 +17,7 @@ namespace CalculatorSimple
         char decimalSeparator;
         double numOne = 0;
         double numTwo = 0;
+        string operation;
 
         public Calculator()
         {
@@ -107,16 +108,37 @@ namespace CalculatorSimple
             }            
         }
 
-        private void buttonAdd_Click(object sender, EventArgs e)
+
+        private void Operation_Click(object sender, EventArgs e)
         {
+            //Button button = (Button)sender;
             numOne = Convert.ToDouble(Display.Text);
             Display.Text = string.Empty;
+            operation = ((Button)sender).Text;            
         }
 
         private void buttonResult_Click(object sender, EventArgs e)
         {
-            numTwo = Convert.ToDouble(Display.Text);
-            Display.Text = (numOne + numTwo).ToString();            
+            double result = 0;
+            numTwo = Convert.ToDouble(Display.Text);  
+            if(operation == "+")
+            {
+                result = numOne + numTwo;
+            }
+            else if(operation == "-")
+            {
+                result = numOne - numTwo;
+            }
+            else if (operation == "x")
+            {
+                result = numOne * numTwo;
+            }
+            else if (operation == "/")
+            {
+                result = numOne / numTwo;
+            }
+
+            Display.Text = result.ToString();
         }
     }
 }
