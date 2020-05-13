@@ -76,20 +76,18 @@ namespace CalculatorSimple
             string s = Display.Text;
             if (s.Length > 1)
             {
-                if ((s.Contains("-")) && (s.Length == 2))
+                if ((s.Contains("-")) && (s.Length == 2) || s.Substring(s.Length - 1, 1) == decimalSeparator.ToString())
                 {
                     s = "0";
+                    Display.Text = s;
+                    return;
                 }
-                else
-                {
-                    s = s.Substring(0, (s.Length - 1));
-                }
+                s = s.Substring(0, (s.Length - 1));
             }
             else
             {
                 s = "0";
             }
-
             Display.Text = s;
         }
 
