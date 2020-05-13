@@ -111,10 +111,10 @@ namespace CalculatorSimple
 
         private void Operation_Click(object sender, EventArgs e)
         {
-            //Button button = (Button)sender;
+            Button button = (Button)sender;
             numOne = Convert.ToDouble(Display.Text);
             Display.Text = string.Empty;
-            operation = ((Button)sender).Text;            
+            operation = button.Text;
         }
 
         private void buttonResult_Click(object sender, EventArgs e)
@@ -139,6 +139,13 @@ namespace CalculatorSimple
             }
 
             Display.Text = result.ToString();
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            Display.Text = "0";
+            numOne = 0;
+            numTwo = 0;
         }
     }
 }
