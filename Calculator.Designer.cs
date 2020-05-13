@@ -46,6 +46,7 @@
             this.buttonSubstract = new System.Windows.Forms.Button();
             this.buttonMultiply = new System.Windows.Forms.Button();
             this.buttonDivide = new System.Windows.Forms.Button();
+            this.buttonResult = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Display
@@ -197,6 +198,7 @@
             this.buttonAdd.TabIndex = 14;
             this.buttonAdd.Text = "+";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonSubstract
             // 
@@ -228,11 +230,23 @@
             this.buttonDivide.Text = "/";
             this.buttonDivide.UseVisualStyleBackColor = true;
             // 
+            // buttonResult
+            // 
+            this.buttonResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonResult.Location = new System.Drawing.Point(12, 440);
+            this.buttonResult.Name = "buttonResult";
+            this.buttonResult.Size = new System.Drawing.Size(346, 80);
+            this.buttonResult.TabIndex = 18;
+            this.buttonResult.Text = "=";
+            this.buttonResult.UseVisualStyleBackColor = true;
+            this.buttonResult.Click += new System.EventHandler(this.buttonResult_Click);
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 529);
+            this.Controls.Add(this.buttonResult);
             this.Controls.Add(this.buttonDivide);
             this.Controls.Add(this.buttonMultiply);
             this.Controls.Add(this.buttonSubstract);
@@ -278,6 +292,7 @@
         private System.Windows.Forms.Button buttonSubstract;
         private System.Windows.Forms.Button buttonMultiply;
         private System.Windows.Forms.Button buttonDivide;
+        private System.Windows.Forms.Button buttonResult;
     }
 }
 
