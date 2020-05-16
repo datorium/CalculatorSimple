@@ -34,6 +34,10 @@ namespace CalculatorSimple
             decimalSeparator = Convert.ToChar(Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator);
             this.BackColor = Color.Purple;
             this.Width = widthSmall;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+
             Display.Font = new Font("Roboto", 22f);
             Display.Text = "0";
             Display.TabStop = false;
