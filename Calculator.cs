@@ -121,6 +121,13 @@ namespace CalculatorSimple
         {
             Button button = (Button)sender;
             numOne = Convert.ToDouble(Display.Text);
+            
+            if(button.Text == "Sqrt")
+            {
+                Display.Text = Math.Sqrt(numOne).ToString();
+                return;
+            }            
+            
             Display.Text = string.Empty;
             operation = button.Text;
         }
@@ -158,9 +165,6 @@ namespace CalculatorSimple
         {
             Display.Text = "0";
             numOne = 0;
-            numTwo = 0;
-            numTwo = 0;
-            numTwo = 0;
             numTwo = 0;
         }
 
