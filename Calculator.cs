@@ -34,7 +34,7 @@ namespace CalculatorSimple
             decimalSeparator = Convert.ToChar(Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator);
             this.BackColor = Color.Purple;
             this.Width = widthSmall;
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;
 
@@ -115,7 +115,6 @@ namespace CalculatorSimple
                 
             }            
         }
-
 
         private void Operation_Click(object sender, EventArgs e)
         {
