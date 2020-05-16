@@ -18,6 +18,9 @@ namespace CalculatorSimple
         double numOne = 0;
         double numTwo = 0;
         string operation;
+        bool scifiMode = false;
+        const int widthSmall = 300;
+        const int widthLarge = 540;
 
         public Calculator()
         {
@@ -30,6 +33,7 @@ namespace CalculatorSimple
 
             decimalSeparator = Convert.ToChar(Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator);
             this.BackColor = Color.Purple;
+            this.Width = widthSmall;
             Display.Font = new Font("Roboto", 22f);
             Display.Text = "0";
             Display.TabStop = false;
@@ -137,6 +141,11 @@ namespace CalculatorSimple
             {
                 result = numOne / numTwo;
             }
+            else if (operation == "^")
+            {
+                result = Math.Pow(numOne, numTwo);
+            }
+
 
             Display.Text = result.ToString();
         }
@@ -146,6 +155,22 @@ namespace CalculatorSimple
             Display.Text = "0";
             numOne = 0;
             numTwo = 0;
+            numTwo = 0;
+            numTwo = 0;
+            numTwo = 0;
+        }
+
+        private void buttonSciFi_Click(object sender, EventArgs e)
+        {
+            if (scifiMode)
+            {
+                this.Width = widthSmall;
+            }
+            else
+            {
+                this.Width = widthLarge;                
+            }
+            scifiMode = !scifiMode;
         }
     }
 }
